@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:provider_mobx/src/store/counter/counter_store.dart';
 
 class Counter extends StatefulWidget {
-  Counter({Key? key}) : super(key: key);
+  const Counter({Key? key}) : super(key: key);
 
   @override
   _CounterState createState() => _CounterState();
@@ -22,7 +22,7 @@ class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(10, 200, 10, 20),
+      margin: const EdgeInsets.fromLTRB(10, 200, 10, 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -30,10 +30,10 @@ class _CounterState extends State<Counter> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Counter component',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Observer(
@@ -41,7 +41,7 @@ class _CounterState extends State<Counter> {
                     '${counterStore.counter}',
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 FloatingActionButton.extended(
